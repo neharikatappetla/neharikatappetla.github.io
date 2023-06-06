@@ -4,8 +4,8 @@ let dhonioldinfo ={
     Description :"Captain"
 }
 
-let dhoninewinfo = {
-    imgurl:"2wCEAAkGBxIQEhUPEhAQDw8PEA8PDxAVDxUQEBAPFRIWFhUVFRUYHSggGBolGxUVITIhJSkuLi8uFx8zODMtNygtLi0BCgoKDg0OGhAQFy0dIB0uLSstLS0tLS0tLS8vLy0rLS8tLS0tKy0tLSsrLS0tKy0tLS0rLSstLS0tLS0tLS0tLf",
+let dhoniyounginfo = {
+    imgurl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdlYJXd9QNuYtydlutW00qlEwJsEgyd27RtcqXqRywjw&usqp=CAU&ec=48665701",
     name:"MSD",
     Description :"Indian Cricketer"
 }
@@ -13,7 +13,7 @@ let isdhoniold = true;
 let displayobject;
 let flipdata = function(){
     if(isdhoniold == true){
-        displayobject = dhoninewinfo;
+        displayobject = dhoniyounginfo;
         isdhoniold = false;
     }
     else{
