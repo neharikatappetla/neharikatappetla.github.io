@@ -9,8 +9,14 @@ let displayobject;
 let getRandomUser = function(){
     fetch("https://randomuser.me/api")
     .then(response => response.json())
-    .then(data => console.log(data))
-    document.getElementById("dhoni-img").src = displayobject.imgurl;
-    document.getElementById("dhoni-name").innerHTML =displayobject.name;
-    document.getElementById("dhoni-description").innerHTML = displayobject.Description;
+    .then(data => {
+        displayobject.name=data.results[0].name.first + " " + data.results[0].name.last
+        displayobject.imgurl =data.results[0].picture.large
+        displayobject.Description=data.results[0].gender
+        document.getElementById("dhoni-img").src = displayobject.imgurl;
+        document.getElementById("dhoni-name").innerHTML =displayobject.name;
+        document.getElementById("dhoni-description").innerHTML = displayobject.Description;
+
+    })
+    
 }
