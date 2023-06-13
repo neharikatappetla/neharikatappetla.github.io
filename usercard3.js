@@ -4,22 +4,12 @@ let dhonioldinfo ={
     Description :"Captain"
 }
 
-let dhoniyounginfo = {
-    imgurl:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdlYJXd9QNuYtydlutW00qlEwJsEgyd27RtcqXqRywjw&usqp=CAU&ec=48665701",
-    name:"MSD",
-    Description :"Indian Cricketer"
-}
-let isdhoniold = true;
+
 let displayobject;
-let flipdata = function(){
-    if(isdhoniold == true){
-        displayobject = dhoniyounginfo;
-        isdhoniold = false;
-    }
-    else{
-        displayobject = dhonioldinfo;
-        isdhoniold = true;
-    }
+let getRandomUser = function(){
+    fetch("https://randomuser.me/api")
+    .then(response => response.json())
+    .then(data => console.log(data))
     document.getElementById("dhoni-img").src = displayobject.imgurl;
     document.getElementById("dhoni-name").innerHTML =displayobject.name;
     document.getElementById("dhoni-description").innerHTML = displayobject.Description;
